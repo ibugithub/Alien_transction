@@ -1,0 +1,44 @@
+<% content_for :styles do %>  
+    h2 {
+        color: darkred;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .container {
+        text-align: center;
+    }
+    button {
+        margin-top: 200px;
+        color: #040404;
+        background-color: #ebc143;
+        padding: 1rem;
+        border-radius: 11%;
+        font-size: 25px;
+    }
+    .sign_in_up {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+<% end %>
+
+<div class="container">
+  <h2>Welcome to Alien's Transaction</h2> 
+
+  <div class="sign_in_up">
+    <% if user_signed_in? %>
+      <%= link_to categories_path do %>
+        <button class="rounded-full">Start</button>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_registration_path do %>
+        <button class="rounded-full">Sign Up</button>
+      <% end %>
+
+      <%= link_to new_user_session_path do %>
+        <button class="rounded-full">Sign In</button>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+

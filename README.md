@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>RoR Group Capstone - Recipes4All</h1>
+	<h1>Alien's Expenses</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -21,7 +21,7 @@
 
 # 📖 Ruby group capstone - Catalog of my things <a name="about-project"></a>
 
-**Recipes4All** is a RoR project for the Microverse Capstone.
+**Alien's Expenses** is a RoR project for the Microverse Capstone.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -34,8 +34,8 @@
 
 #### Key Features <a name="key-features"></a>
 
-- `Add and Remove Food`: Users can easily add and remove food items from their recipes.
-- `Add Recipes`: Includes a database design that will be used to connect to a real PostgreSQL database.
+- `Add and Remove Category`: Users can easily add and remove food items from their recipes.
+- `Add Expenses`: Includes a database design that will be used to connect to a real PostgreSQL database.
 - `Sign Up and Log In`: User authentication allows users to sign up and log in to the application securely.
 
 
@@ -43,7 +43,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-- Step 1: Clone this project using this git comand "git clone", (if you don't have git installed please visit
+- Step 1: Clone this project using this git command "git clone", (if you don't have git installed please visit
   https://git-scm.com/downloads and install it).
 - Step 2: Once you have installed git you can clone this project using the command below:
   ```
@@ -58,7 +58,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running cloning this repo `https://github.com/ibugithub/Alien_transction`.
+To get a local copy up and running clone this repo `https://github.com/ibugithub/Alien_transction`.
 
 ### Prerequisites
 
@@ -66,7 +66,7 @@ To get a local copy up and running cloning this repo `https://github.com/ibugith
 -1 Have installed any code editor and Ruby 
 
 If you encounter any issues trying to run it, please feel free to
-[open a ticket](https://github.com/ibugithub/Alien_transction) to let me know and i will work on it to the best
+[open a ticket](https://github.com/ibugithub/Alien_transction) to let me know and I will work on it to the best
 of my abilities
 
 ### Setup
@@ -88,6 +88,15 @@ To run the project:
 ```sh
   cd PATH_TO_CLONE
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+You can try other deployment platforms like [Heroku](https://www.heroku.com/) or [Netlify](https://www.netlify.com/).
+### Live Demo <a name="live-demo"></a>
+
+[Live Demo Link]([https://rails-8sbg.onrender.com/](https://rails-f64g.onrender.com/))
+
+[Presentation Video](https://www.loom.com/share/3ea08f0788a844fc927e87c0e399707e)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

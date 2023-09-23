@@ -94,7 +94,7 @@ To run the project:
 You can try other deployment platforms like [Heroku](https://www.heroku.com/) or [Netlify](https://www.netlify.com/).
 ### Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](https://rails-8sbg.onrender.com/](https://rails-f64g.onrender.com/))
+[Live Demo Link](https://rails-f64g.onrender.com/)
 
 [Presentation Video](https://www.loom.com/share/3ea08f0788a844fc927e87c0e399707e)
 

@@ -11,7 +11,6 @@ RSpec.feature 'Category Show', type: :feature do
     category.expenses.create(name: 'Expense 2', amount: 75.0)
   end
 
-
   scenario "User views a category's details" do
     visit category_path(category)
 

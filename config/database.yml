@@ -19,7 +19,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: money-scanner
   username: Ibu
   password: ibuPostData1749%
-  host: localhost

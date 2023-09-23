@@ -1,0 +1,112 @@
+<% content_for :styles do %> 
+    .category {
+        background: linear-gradient(90deg, #240129 46%,  #050000 100%);
+        margin-top: 1rem;
+        color: darkred;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: center;
+        padding: 3rem;
+    }
+    .img-details {
+        color: darkred;
+        padding: 2.5rem;
+        background: linear-gradient(90deg, #050000 46%, #240129 100%);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .img-details img {
+        width: 40px;
+    }
+
+    .details {
+        font-size: 1.7rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        margin-top: unset;
+        max-width: 1000px;
+    }
+
+    .expenses {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        color: darkred;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    #total {
+        font-size: 1.7rem;
+        color: darkred;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .new-cat {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(90deg, #1d0c1f 46%, #201921 100%);
+        padding: 2rem;
+        color: darkred;
+    }
+    .expense {
+        background: linear-gradient(90deg, #240129 46%,  #050000 100%);
+        padding: 3rem;
+    }
+
+    #name-amount {
+        display: flex;
+        justify-content: space-between;
+    }
+<% end %> 
+
+<div class='container'> 
+        <div class = 'img-details'>
+            <%= link_to Category, class: "btn btn-primary" do %>
+            <img src="https://cdn-icons-png.flaticon.com/128/11997/11997228.png">
+            <% end %>
+            <div class='details'>
+                <div> Details </div>
+            </div>
+        </div>
+    <div class='category'>
+
+        <div class='icon'>
+            <img src="<%= @category.icon %>">
+        </div>
+
+        <%= @category.name %> 
+    </div>
+
+    <div class='expenses'>
+        <% @expenses.each do |expense| %> 
+            <div class='expense'>
+                <div id='name-amount'>
+                    <div>
+                        Expenses: <%= expense.name %>
+                    </div>
+                    <div>
+                        <%= expense.amount %>
+                    </div>
+                </div>
+                <%= expense.updated_at %> 
+            </div>
+
+        <% end %>
+    </div>
+    <br>
+
+    <div id='total'> 
+        Total Cost :  <%= @expenses.sum(:amount) %>
+    </div>
+    <div class= 'new-cat'>
+        <%= link_to "Create Expense", new_category_expense_path(@category) %>
+    </div>
+</div>

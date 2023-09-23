@@ -1,0 +1,105 @@
+<% content_for :styles do %> 
+
+    .container { 
+        margin-top: unset;
+        max-width: 1000px;
+    }
+
+    .INT {
+        padding: 2.5rem 4rem;
+        display: flex;
+        margin-top: 2rem;
+        gap: 3rem;
+        background: linear-gradient(90deg, #240129 46%,  #050000 100%);
+        color: darkred;
+        justify-content: space-between;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .new-cat, .cat {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        background: linear-gradient(90deg, #1d0c1f 46%, #201921 100%);
+        color: darkred;
+        margin-top: 2rem;
+    }
+    .cat {
+        background: linear-gradient(90deg, #050000 46%, #240129 100%);
+        margin-top: unset;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+    #catt {
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        padding-right: 5rem;
+    }
+    .cat  img {
+        width: 50px;
+    }
+    .icon img { 
+        height: 100px;
+    }
+<% end %>
+
+
+
+<div class='container'>
+    <div class='cat'>
+        <%= link_to root_path do %>
+            <img src="https://cdn-icons-png.flaticon.com/128/3139/3139670.png">
+        <% end %>
+        <div id='catt'>
+         <h1>Categories</h1>
+        </div>
+    </div>
+   
+    <% if @categories.any? %>
+            <% @categories.each do |category| %>
+                <%= link_to category do %>
+                    <div class='INT'>
+                        <div class='icon'>
+                        <img src="<%= category.icon %>">
+                        </div>
+
+                        <div class='name'> 
+                            <div>
+                                <%= category.name %>
+                            </div>
+
+                            <div>
+                                <%= category.updated_at %>
+                            </div>
+                        </div>
+
+                        <div class='total-amount'> 
+                            <%= category.expenses.sum(:amount) %>
+                        </div>
+                        
+                    </div>
+                <% end %>
+             
+
+                <!--<%= link_to 'Edit', edit_category_path(category), class: 'btn btn-warning btn-sm' %>
+                <%= form_with url: category, method: :delete do |form| %> 
+                    <%= form.submit "remove" %>
+                <% end %> -->
+            <% end %>
+    <% else %> 
+        <h4> You don't have any categories </h4>  
+    <% end %>
+    <div class='new-cat'>
+        <%= link_to 'Create Category', new_category_path, class: 'btn btn-primary' %>
+    </div>
+
+
+</div>

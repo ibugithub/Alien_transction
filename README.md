@@ -47,7 +47,7 @@
   https://git-scm.com/downloads and install it).
 - Step 2: Once you have installed git you can clone this project using the command below:
   ```
-  git clone https://github.com/ibugithub/List-my-catalog.git
+  git clone https://github.com/ibugithub/Alien_transction
   ```
 - Step 3: Once you have cloned this repo navigate to the folder that contains
   the repository.
@@ -58,7 +58,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running cloning this repo `https://github.com/MarcoDDM/recipe-app.git`.
+To get a local copy up and running cloning this repo `https://github.com/ibugithub/Alien_transction`.
 
 ### Prerequisites
 
@@ -66,18 +66,18 @@ To get a local copy up and running cloning this repo `https://github.com/MarcoDD
 -1 Have installed any code editor and Ruby 
 
 If you encounter any issues trying to run it, please feel free to
-[open a ticket](https://github.com/MarcoDDM/recipe-app.git) to let me know and i will work on it to the best
+[open a ticket](https://github.com/ibugithub/Alien_transction) to let me know and i will work on it to the best
 of my abilities
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-`git clone https://github.com/MarcoDDM/recipe-app.git`
+`git clone https://github.com/ibugithub/Alien_transction`
 
 or
 
-`git clone https://github.com/MarcoDDM/recipe-app.git` <-- _Only if you have [SSH keys configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on your GitHub account_.
+`git clone https://github.com/ibugithub/Alien_transction` <-- _Only if you have [SSH keys configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) on your GitHub account_.
 
 ### Usage
 
@@ -99,10 +99,6 @@ To run the project:
 - GitHub: [@githubhandle](https://github.com/ibugithub)
 - Twitter: [@twitterhandle](https://twitter.com/mdibrahimibuu)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ibuu)
-
-👤 **Marco Almada**
-- GitHub: [benja27](https://github.com/MarcoDDM)
-- LinkedIn: [Benja28](www.linkedin.com/in/marcoalmadaar)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -143,6 +139,7 @@ If you like this project please give me a start and share my portfolio to recrui
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank to all my coding partners.
+I would love to thanks Creative Commons license of the design and Gregoire Vella on Behance for the awesome design idea. you can checkout their other desings: (https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

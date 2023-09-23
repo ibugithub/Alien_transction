@@ -1,28 +1,30 @@
 <% content_for :styles do %>  
     h2 {
-        color: darkred;
-        font-weight: bold;
-        font-size: 30px;
+      color: darkred;
+      font-weight: bold;
+      font-size: 30px;
     }
-    .container {
-        text-align: center;
+    .containerr {
+      width: 100%;
+      text-align: center;
+      margin-top: 6rem;
     }
     button {
-        margin-top: 200px;
-        color: #040404;
-        background-color: #ebc143;
-        padding: 1rem;
-        border-radius: 11%;
-        font-size: 25px;
+      margin-top: 200px;
+      color: #040404;
+      background-color: #ebc143;
+      padding: 1rem;
+      border-radius: 11%;
+      font-size: 25px;
     }
     .sign_in_up {
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
     }
 <% end %>
 
-<div class="container">
+<div class="containerr">
   <h2>Welcome to Alien's Transaction</h2> 
 
   <div class="sign_in_up">
@@ -30,6 +32,11 @@
       <%= link_to categories_path do %>
         <button class="rounded-full">Start</button>
       <% end %>
+      <button class="rounded-full">
+      <%= form_with url: destroy_user_session_path, method: :delete do |form| %> 
+        <%= form.submit "Logout" %>
+      <% end %>
+      </button>
     <% else %>
       <%= link_to new_user_registration_path do %>
         <button class="rounded-full">Sign Up</button>

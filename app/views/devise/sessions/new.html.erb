@@ -1,0 +1,77 @@
+<% content_for :styles do %>
+    .img-details {
+        color: darkred;
+        padding: 2.5rem;
+        background: linear-gradient(90deg, #050000 46%, #240129 100%);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .img-details img {
+        width: 40px;
+    }
+
+    .details {
+        font-size: 1.7rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container{
+    margin-top: unset;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+  }
+
+    .actions {
+    margin-top: 2rem;
+  }
+
+    .input, input {
+    padding: 1rem 4rem;
+    border: 4px solid darkred;
+  }
+
+  #all-feild {
+    margin-top: 8rem;
+  }
+
+<% end %>
+
+
+<div class="container">
+
+  <div class = 'img-details'>
+      <%= link_to root_path, class: "btn btn-primary" do %>
+      <img src="https://cdn-icons-png.flaticon.com/128/11997/11997228.png">
+      <% end %>
+      <div class='details'>
+          <div> Login </div>
+      </div>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div id="all-feild">
+    <div class="field">
+      <br />
+      <%= f.email_field :email, autofocus: true, placeholder: 'Email', class: "input" %>
+    </div>
+
+    <div class="field">
+      <br />
+      <%= f.password_field :password,  placeholder: 'Password', class: "input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+  </div>
+  <% end %>
+
+</div>

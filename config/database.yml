@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: money-scanner
+  username: Ibu
+  password: ibuPostData1749%
+  host: localhost
+
+test:
+  <<: *default
+  database: money-scanner-testing
+  username: Ibu
+  password: ibuPostData1749%
+  host: localhost
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+  database: money-scanner
+  username: Ibu
+  password: ibuPostData1749%

@@ -1,0 +1,77 @@
+<% content_for :styles do %> 
+  .img-details {
+    color: darkred;
+    padding: 2.5rem;
+    background: linear-gradient(90deg, #050000 46%, #240129 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.img-details img {
+    width: 40px;
+}
+
+  .details {
+    font-size: 1.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .create-category {
+    margin-top: 3rem;
+  }
+
+  .input, input {
+    padding: 1rem 4rem;
+    border: 4px solid darkred;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+<% end %>
+
+<div class ='container'>
+  <div class = 'img-details'>
+      <%= link_to Category, class: "btn btn-primary" do %>
+      <img src="https://cdn-icons-png.flaticon.com/128/11997/11997228.png">
+      <% end %>
+      <div class='details'>
+          <div> New Category </div>
+      </div>
+  </div>
+
+<%= form_with(model: @category, local: true) do |form| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% @category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class= 'form' >
+    <div class="field">
+      <br/>
+      <%= form.text_field :name, placeholder: "Name", class: "input" %>
+    </div>
+
+      <div class="field">
+          <br/>
+          <%= form.text_field :icon, placeholder: "Icon Url", class: "input"  %>
+    </div>
+ 
+    <div class="actions">
+      <%= form.submit 'Create Category', class: 'input create-category' %>
+    </div>
+   </div>
+<% end %>
+</div>
